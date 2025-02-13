@@ -24,5 +24,5 @@ brew "kubectx"
 
 # Install fonts
 cask 'font-source-code-pro'
-cast 'font-source-sans-pro'
+cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
