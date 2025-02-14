@@ -2,10 +2,6 @@
 
 echo "Setting up workspace..."
 
-# Copy needed files
-echo "Copying over zsh required files..."
-cp -av ~/.config/coderv2/dotfiles/zsh/. ~/
-
 # Check for homebrew then install if not found
 if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -22,6 +18,13 @@ brew update
 # Install brewfile
 brew tap homebrew/bundle
 brew bundle
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Copy needed files
+echo "Copying over zsh required files..."
+cp -av ~/.config/coderv2/dotfiles/zsh/. ~/
 
 # Install Gcloud CLI via snap
 echo "Installing gcloud cli..."
