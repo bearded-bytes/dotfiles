@@ -19,9 +19,8 @@ brew "kubernetes-cli"
 brew "kubectx"
 brew "nano"
 brew "helm"
-brew "snap"
 
-
-# Install Casks\
-cask "google-cloud-sdk"
-cask "font-source-code-pro"
+# Install Casks
+# Not relevant for Linux/Ubuntu, only MACOS
+# cask "google-cloud-sdk"
+# cask "font-source-code-pro"
