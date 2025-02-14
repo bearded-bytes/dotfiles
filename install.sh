@@ -20,4 +20,4 @@ brew tap homebrew/bundle
 brew bundle
 
 # ZSH Default
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $USER
