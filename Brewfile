@@ -20,6 +20,8 @@ brew 'tree'
 brew 'wget'
 brew "kubernetes-cli"
 brew "kubectx"
+brew "nano"
+brew "google-cloud-sdk"
 
 
 # Install fonts

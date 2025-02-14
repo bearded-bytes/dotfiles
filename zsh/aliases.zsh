@@ -7,3 +7,4 @@ alias ll="$(brew --prefix coreutils)/libexec/gnubin/ls -ahlF --color --group-dir
 alias k="kubectl"
 alias kx="kubectx"
 alias weather="curl -4 http://wttr.in"
+alias gcp="gcloud"
