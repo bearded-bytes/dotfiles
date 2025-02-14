@@ -19,10 +19,14 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Install Gcloud CLI via snap
+echo "Installing gcloud cli..."
+snap install google-cloud-cli --classic
+
 # ZSH Default
 echo "Changing shell to zsh..."
 sudo chsh -s $(which zsh) $USER
 
 # Copy needed files
 echo "Copying over zsh required files..."
-cp -rf ~/.config/coderv2/dotfiles/. ~/
+cp -av ~/.config/coderv2/dotfiles/zsh/. ~/

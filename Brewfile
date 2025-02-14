@@ -19,6 +19,7 @@ brew "kubernetes-cli"
 brew "kubectx"
 brew "nano"
 brew "helm"
+brew "snap"
 
 
 # Install Casks\
