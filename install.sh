@@ -2,11 +2,6 @@
 
 echo "Setting up workspace..."
 
-# copy dotfiles into ~/
-shopt -s dotglob # include . in *
-shopt -s extglob
-yes | cp -rf ~/dotfiles/!(.git|.|..|.local) ~
-
 # Check for homebrew then install if not found
 if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -30,4 +25,4 @@ sudo chsh -s $(which zsh) $USER
 
 # Copy needed files
 echo "Copying over zsh required files..."
-cp -rfv ~/dotfiles/zsh $HOME/
+yes | cp -rf ~/.config/coderv2/dotfiles/!(.git|.|..|.local) ~
