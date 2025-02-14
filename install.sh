@@ -20,4 +20,9 @@ brew tap homebrew/bundle
 brew bundle
 
 # ZSH Default
+echo "Changing shell to zsh..."
 sudo chsh -s $(which zsh) $USER
+
+# Copy needed files
+echo "Copying over zsh required files..."
+cp zsh/* ~
