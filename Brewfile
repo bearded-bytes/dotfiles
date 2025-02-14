@@ -1,25 +1,26 @@
-# # Taps
-# tap 'homebrew/bundle'
+# Taps
+tap 'homebrew/bundle'
 
-# # Ensure that apps get installed in system Applications Folder
+# Ensure that apps get installed in system Applications Folder
 
-# cask_args appdir: '/Applications'
+cask_args appdir: '/Applications'
 
-# #Install ZSH
-# brew 'zsh' unless system "brew list zsh >/dev/null 2>&1"
-# brew 'zsh-completions' unless system "brew list zsh-completions >/dev/null 2>&1"
+#Install ZSH
+brew 'zsh' 
+brew 'zsh-completions'
 
-# # Install Core Utils
-# brew 'coreutils'  unless system "brew list coreutils >/dev/null 2>&1"
-# brew 'findutils' unless system "brew list findutils >/dev/null 2>&1"
+# Install Core Utils
+brew 'coreutils' 
+brew 'findutils' 
 
-# # Install needful binaries
-# brew 'tree'  unless system "brew list tree >/dev/null 2>&1"
-# brew 'wget'  unless system "brew list wget >/dev/null 2>&1"
-# brew "kubernetes-cli"  unless system "brew list kuberetes-cli >/dev/null 2>&1"
-# brew "kubectx" unless system "brew list kubectx >/dev/null 2>&1"
-# brew "nano" unless system "brew list nano >/dev/null 2>&1"
-# brew "helm"  unless system "brew list helm >/dev/null 2>&1"
+# Install needful binaries
+brew 'tree'  
+brew 'wget' 
+brew "kubernetes-cli" 
+brew "kubectx"
+brew "nano"
+brew "helm" 
+brew "gnupg"
 
 # Install Casks
 # Not relevant for Linux/Ubuntu, only MACOS
@@ -108,49 +109,49 @@
 # end
 
 
-# Taps
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/core'
+# # Taps
+# tap 'homebrew/bundle'
+# tap 'homebrew/cask'
+# tap 'homebrew/core'
 
-# Ensure apps get installed in system Applications Folder
-cask_args appdir: '/Applications'
+# # Ensure apps get installed in system Applications Folder
+# cask_args appdir: '/Applications'
 
-# First, check what's installed
-puts "\nChecking installed packages..."
-zsh_installed = system "brew list zsh >/dev/null 2>&1"
-zsh_comp_installed = system "brew list zsh-completions >/dev/null 2>&1"
-coreutils_installed = system "brew list coreutils >/dev/null 2>&1"
-findutils_installed = system "brew list findutils >/dev/null 2>&1"
-tree_installed = system "brew list tree >/dev/null 2>&1"
-wget_installed = system "brew list wget >/dev/null 2>&1"
-kube_installed = system "brew list kubernetes-cli >/dev/null 2>&1"
-kubectx_installed = system "brew list kubectx >/dev/null 2>&1"
-helm_installed = system "brew list helm >/dev/null 2>&1"
-nano_installed = system "brew list nano >/dev/null 2>&1"
+# # First, check what's installed
+# puts "\nChecking installed packages..."
+# zsh_installed = system "brew list zsh >/dev/null 2>&1"
+# zsh_comp_installed = system "brew list zsh-completions >/dev/null 2>&1"
+# coreutils_installed = system "brew list coreutils >/dev/null 2>&1"
+# findutils_installed = system "brew list findutils >/dev/null 2>&1"
+# tree_installed = system "brew list tree >/dev/null 2>&1"
+# wget_installed = system "brew list wget >/dev/null 2>&1"
+# kube_installed = system "brew list kubernetes-cli >/dev/null 2>&1"
+# kubectx_installed = system "brew list kubectx >/dev/null 2>&1"
+# helm_installed = system "brew list helm >/dev/null 2>&1"
+# nano_installed = system "brew list nano >/dev/null 2>&1"
 
-# Display status and install if needed
-puts "\nStatus of packages:"
-puts "ZSH: #{zsh_installed ? '✓ installed' : 'will install'}"
-puts "ZSH Completions: #{zsh_comp_installed ? '✓ installed' : 'will install'}"
-puts "CoreUtils: #{coreutils_installed ? '✓ installed' : 'will install'}"
-puts "FindUtils: #{findutils_installed ? '✓ installed' : 'will install'}"
-puts "Tree: #{tree_installed ? '✓ installed' : 'will install'}"
-puts "Wget: #{wget_installed ? '✓ installed' : 'will install'}"
-puts "Kubernetes CLI: #{kube_installed ? '✓ installed' : 'will install'}"
-puts "KubeCtx: #{kubectx_installed ? '✓ installed' : 'will install'}"
-puts "Helm: #{helm_installed ? '✓ installed' : 'will install'}"
-puts "Nano: #{nano_installed ? '✓ installed' : 'will install'}"
-puts "\nProceeding with installations...\n"
+# # Display status and install if needed
+# puts "\nStatus of packages:"
+# puts "ZSH: #{zsh_installed ? '✓ installed' : 'will install'}"
+# puts "ZSH Completions: #{zsh_comp_installed ? '✓ installed' : 'will install'}"
+# puts "CoreUtils: #{coreutils_installed ? '✓ installed' : 'will install'}"
+# puts "FindUtils: #{findutils_installed ? '✓ installed' : 'will install'}"
+# puts "Tree: #{tree_installed ? '✓ installed' : 'will install'}"
+# puts "Wget: #{wget_installed ? '✓ installed' : 'will install'}"
+# puts "Kubernetes CLI: #{kube_installed ? '✓ installed' : 'will install'}"
+# puts "KubeCtx: #{kubectx_installed ? '✓ installed' : 'will install'}"
+# puts "Helm: #{helm_installed ? '✓ installed' : 'will install'}"
+# puts "Nano: #{nano_installed ? '✓ installed' : 'will install'}"
+# puts "\nProceeding with installations...\n"
 
-# Install packages
-brew 'zsh' unless zsh_installed
-brew 'zsh-completions' unless zsh_comp_installed
-brew 'coreutils' unless coreutils_installed
-brew 'findutils' unless findutils_installed
-brew 'tree' unless tree_installed
-brew 'wget' unless wget_installed
-brew 'kubernetes-cli' unless kube_installed
-brew 'kubectx' unless kubectx_installed
-brew 'helm' unless helm_installed
-brew 'nano' unless nano_installed
+# # Install packages
+# brew 'zsh' unless zsh_installed
+# brew 'zsh-completions' unless zsh_comp_installed
+# brew 'coreutils' unless coreutils_installed
+# brew 'findutils' unless findutils_installed
+# brew 'tree' unless tree_installed
+# brew 'wget' unless wget_installed
+# brew 'kubernetes-cli' unless kube_installed
+# brew 'kubectx' unless kubectx_installed
+# brew 'helm' unless helm_installed
+# brew 'nano' unless nano_installed
