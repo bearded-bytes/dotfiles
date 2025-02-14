@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
- ZSH_THEME="common"
+ ZSH_THEME="clean"
 
 
 # Set list of themes to pick from when loading at random
@@ -102,7 +102,6 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/Caskroom/google-cloud-sdk/latest
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PATH="${PATH}:${HOME}/.krew/bin"
-eval "$(jenv init -)"
 
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
 
