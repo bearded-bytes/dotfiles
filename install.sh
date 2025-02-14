@@ -26,8 +26,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Copying over zsh required files..."
 cp -av ~/.config/coderv2/dotfiles/zsh/. ~/
 
-# Install Gcloud CLI via snap
+# Install Gcloud CLI 
 echo "Installing gcloud cli..."
+gpg-connect-agent reloadagent /bye
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update

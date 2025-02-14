@@ -21,6 +21,7 @@ brew "kubectx"
 brew "nano"
 brew "helm" 
 brew "gnupg"
+brew "gcc"
 
 # Install Casks
 # Not relevant for Linux/Ubuntu, only MACOS
