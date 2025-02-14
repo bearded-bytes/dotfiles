@@ -17,7 +17,30 @@ brew update
 
 # Install brewfile
 brew tap homebrew/bundle
-brew bundle
+while read -r line; do
+    # Skip empty lines and comments
+    [[ -z "$line" || "$line" == \#* ]] && continue
+    
+    # Extract package name and type
+    if [[ "$line" == brew* ]]; then
+        package=$(echo "$line" | cut -d'"' -f2)
+        type="formula"
+    elif [[ "$line" == cask* ]]; then
+        package=$(echo "$line" | cut -d'"' -f2)
+        type="cask"
+    else
+        continue
+    fi
+    
+    # Check and install
+    if brew list --$type | grep -q "^${package}\$"; then
+        echo "$package is already installed"
+    else
+        echo "Installing $package..."
+        brew install $package
+    fi
+done < Brewfile
+
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
