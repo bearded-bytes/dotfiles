@@ -1,7 +1,4 @@
 # Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Ensure that apps get installed in system Applications Folder
@@ -21,10 +18,9 @@ brew 'wget'
 brew "kubernetes-cli"
 brew "kubectx"
 brew "nano"
-brew "google-cloud-sdk"
+brew "helm"
 
 
-# Install fonts
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+# Install Casks\
+cask "google-cloud-sdk"
+cask "font-source-code-pro"

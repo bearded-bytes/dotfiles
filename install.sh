@@ -25,4 +25,4 @@ sudo chsh -s $(which zsh) $USER
 
 # Copy needed files
 echo "Copying over zsh required files..."
-cp -v ~/dotfiles/zsh $HOME/
+cp -rfv ~/dotfiles/zsh $HOME/
