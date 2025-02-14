@@ -25,4 +25,4 @@ sudo chsh -s $(which zsh) $USER
 
 # Copy needed files
 echo "Copying over zsh required files..."
-yes | cp -rf ~/.config/coderv2/dotfiles/!(.git|.|..|.local) ~
+cp -rf ~/.config/coderv2/dotfiles/. ~/
