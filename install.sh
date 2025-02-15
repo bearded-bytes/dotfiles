@@ -29,6 +29,7 @@ cp -av ~/.config/coderv2/dotfiles/zsh/. ~/
 # Install Gcloud CLI 
 echo "Installing gcloud cli..."
 gpg-connect-agent reloadagent /bye
+sudo ln -s /home/linuxbrew/.linuxbrew/Cellar/gnupg/2.4.7/bin/gpg-agent /usr/bin/gpg-agent
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update
